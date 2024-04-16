@@ -27,14 +27,14 @@ const render = async () => {
     highlights.appendChild(item);
 
     item.addEventListener("click", () => {
-      window.location.href = `./item.html?id=${id}`;
+      window.location.href = `./item.html?id=${id}`;  
     });
   };
 
   const productos = await obtenerProductos();
 
   for (const producto of productos) {
-    crearProducto(producto.id, producto.title, producto.image, producto.price);
+    crearProducto(producto.id, producto.name, producto.image, producto.price);
   }
 };
 
